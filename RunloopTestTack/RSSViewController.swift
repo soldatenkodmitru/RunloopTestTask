@@ -25,7 +25,9 @@ class RSSViewController: UIViewController, UITableViewDataSource, UITableViewDel
     override func viewDidLoad() {
         super.viewDidLoad()
         segmentedControl.addTarget(self, action: #selector(segmentChanged), for: .valueChanged)
-        updateData()
+        DispatchQueue.main.async {
+            self.updateData()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

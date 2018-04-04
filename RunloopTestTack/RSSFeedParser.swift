@@ -17,7 +17,7 @@ enum typeFeed {
 
 class RSSFeedParser {
     
-    let entertainmentURL = URL(string:  "http://feeds.reuters.com/reuters/entertainment")!
+    let entertainmentURL = URL(string: "http://feeds.reuters.com/reuters/entertainment")!
     let environmentURL = URL(string: "http://feeds.reuters.com/reuters/environment")!
     let businessURL = URL(string: "http://feeds.reuters.com/reuters/businessNews")!
    
@@ -40,7 +40,7 @@ class RSSFeedParser {
             return
         }
         
-        feedParser!.parseAsync(result: { (result) in
+        feedParser!.parseAsync(queue: DispatchQueue.global(qos: .userInitiated), result: { (result) in
             switch result
             {
                 case let .rss(feed):
