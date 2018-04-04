@@ -7,21 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0ADFA19915017247151E1025 /* Pods_RunloopTestTack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0931F5B96FC94633CDF886E8 /* Pods_RunloopTestTack.framework */; };
 		B4A303A82075129E0010E0BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A303A72075129E0010E0BE /* AppDelegate.swift */; };
-		B4A303AA2075129E0010E0BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A303A92075129E0010E0BE /* ViewController.swift */; };
 		B4A303AD2075129E0010E0BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4A303AB2075129E0010E0BE /* Main.storyboard */; };
 		B4A303AF207512A10010E0BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4A303AE207512A10010E0BE /* Assets.xcassets */; };
 		B4A303B2207512A10010E0BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4A303B0207512A10010E0BE /* LaunchScreen.storyboard */; };
+		B4A303BD207512F50010E0BE /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A303B9207512F40010E0BE /* DetailsViewController.swift */; };
+		B4A303BE207512F50010E0BE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A303BA207512F40010E0BE /* MainViewController.swift */; };
+		B4A303BF207512F50010E0BE /* RSSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A303BB207512F50010E0BE /* RSSViewController.swift */; };
+		B4A303C0207512F50010E0BE /* RSSFeedParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A303BC207512F50010E0BE /* RSSFeedParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0931F5B96FC94633CDF886E8 /* Pods_RunloopTestTack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunloopTestTack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B09997D1406B7C87C1716E3C /* Pods-RunloopTestTack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunloopTestTack.release.xcconfig"; path = "Pods/Target Support Files/Pods-RunloopTestTack/Pods-RunloopTestTack.release.xcconfig"; sourceTree = "<group>"; };
 		B4A303A42075129E0010E0BE /* RunloopTestTack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunloopTestTack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A303A72075129E0010E0BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B4A303A92075129E0010E0BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B4A303AC2075129E0010E0BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4A303AE207512A10010E0BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4A303B1207512A10010E0BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4A303B3207512A10010E0BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4A303B9207512F40010E0BE /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		B4A303BA207512F40010E0BE /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B4A303BB207512F50010E0BE /* RSSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSViewController.swift; sourceTree = "<group>"; };
+		B4A303BC207512F50010E0BE /* RSSFeedParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSFeedParser.swift; sourceTree = "<group>"; };
+		EB0DA8A63E66D0E12832A0F9 /* Pods-RunloopTestTack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunloopTestTack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RunloopTestTack/Pods-RunloopTestTack.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ADFA19915017247151E1025 /* Pods_RunloopTestTack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BEA946D55D4DFD2C937D3B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB0DA8A63E66D0E12832A0F9 /* Pods-RunloopTestTack.debug.xcconfig */,
+				B09997D1406B7C87C1716E3C /* Pods-RunloopTestTack.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		818BEA545B44D5F0B52C2EAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0931F5B96FC94633CDF886E8 /* Pods_RunloopTestTack.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B4A3039B2075129E0010E0BE = {
 			isa = PBXGroup;
 			children = (
 				B4A303A62075129E0010E0BE /* RunloopTestTack */,
 				B4A303A52075129E0010E0BE /* Products */,
+				2BEA946D55D4DFD2C937D3B4 /* Pods */,
+				818BEA545B44D5F0B52C2EAE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,8 +84,11 @@
 		B4A303A62075129E0010E0BE /* RunloopTestTack */ = {
 			isa = PBXGroup;
 			children = (
+				B4A303B9207512F40010E0BE /* DetailsViewController.swift */,
+				B4A303BA207512F40010E0BE /* MainViewController.swift */,
+				B4A303BC207512F50010E0BE /* RSSFeedParser.swift */,
+				B4A303BB207512F50010E0BE /* RSSViewController.swift */,
 				B4A303A72075129E0010E0BE /* AppDelegate.swift */,
-				B4A303A92075129E0010E0BE /* ViewController.swift */,
 				B4A303AB2075129E0010E0BE /* Main.storyboard */,
 				B4A303AE207512A10010E0BE /* Assets.xcassets */,
 				B4A303B0207512A10010E0BE /* LaunchScreen.storyboard */,
@@ -71,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4A303B6207512A10010E0BE /* Build configuration list for PBXNativeTarget "RunloopTestTack" */;
 			buildPhases = (
+				26991989F6517B2C4A2A060E /* [CP] Check Pods Manifest.lock */,
 				B4A303A02075129E0010E0BE /* Sources */,
 				B4A303A12075129E0010E0BE /* Frameworks */,
 				B4A303A22075129E0010E0BE /* Resources */,
+				141207D44ED09D448CA75C39 /* [CP] Embed Pods Frameworks */,
+				DFFD18D1899B200F9524DE4A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,13 +166,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		141207D44ED09D448CA75C39 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RunloopTestTack/Pods-RunloopTestTack-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FeedKit/FeedKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FeedKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RunloopTestTack/Pods-RunloopTestTack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26991989F6517B2C4A2A060E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RunloopTestTack-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFFD18D1899B200F9524DE4A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RunloopTestTack/Pods-RunloopTestTack-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B4A303A02075129E0010E0BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4A303AA2075129E0010E0BE /* ViewController.swift in Sources */,
+				B4A303BE207512F50010E0BE /* MainViewController.swift in Sources */,
+				B4A303BF207512F50010E0BE /* RSSViewController.swift in Sources */,
+				B4A303C0207512F50010E0BE /* RSSFeedParser.swift in Sources */,
 				B4A303A82075129E0010E0BE /* AppDelegate.swift in Sources */,
+				B4A303BD207512F50010E0BE /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +306,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -267,7 +360,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -278,6 +371,7 @@
 		};
 		B4A303B7207512A10010E0BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB0DA8A63E66D0E12832A0F9 /* Pods-RunloopTestTack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +389,7 @@
 		};
 		B4A303B8207512A10010E0BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B09997D1406B7C87C1716E3C /* Pods-RunloopTestTack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
