@@ -25,7 +25,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         nameLabel.text = "Dima Soldatenko";
         feedLabel.text = "";
-        NotificationCenter.default.addObserver(self, selector: #selector(self.feedChanged(notification:)), name: Notification.Name("feedChanged"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.feedChanged(notification:)), name: Notification.Name("selectedFeedChanged"), object: nil)
     }
     
     deinit {
@@ -36,7 +36,7 @@ class MainViewController: UIViewController {
         super.viewWillAppear(animated)
         let current = Date()
         timeLabel.text = formatter.string(from: current)
-        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.getTime), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.getTime), userInfo: nil, repeats: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -52,7 +52,7 @@ class MainViewController: UIViewController {
     
     @objc func feedChanged(notification: Notification){
         if let text = notification.userInfo?["title"] as? String {
-            self.feedLabel.text = text
+            feedLabel.text = text
         }
     }
 }

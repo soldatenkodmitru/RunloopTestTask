@@ -17,9 +17,9 @@ class DetailsViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.isHidden = false
-        self.title = feedItem?.title
-        self.textView.text = feedItem?.description?.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+        navigationController?.navigationBar.isHidden = false
+        title = feedItem?.title
+        textView.text = feedItem?.description?.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
     }
     
 }

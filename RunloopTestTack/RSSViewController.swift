@@ -78,14 +78,14 @@ class RSSViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let feedItem = getFeedItemFor(indexPath: indexPath)
-        NotificationCenter.default.post(name: NSNotification.Name("feedChanged"), object: nil, userInfo: ["title" : feedItem?.title as Any])
+        NotificationCenter.default.post(name: NSNotification.Name("selectedFeedChanged"), object: nil, userInfo: ["title" : feedItem?.title as Any])
         let detailsVC = storyboard?.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
         detailsVC.feedItem = feedItem
         show(detailsVC, sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
     }
         
-    func getFeedFor(section : Int) -> RSSFeed? {
+    func getFeedFor(section: Int) -> RSSFeed? {
         switch segmentedControl.selectedSegmentIndex {
         case 1:
             return section == 0 ? entertainmentFeed : environmentFeed
@@ -94,12 +94,12 @@ class RSSViewController: UIViewController, UITableViewDataSource, UITableViewDel
         }
     }
 
-    func getFeedItemFor(indexPath : IndexPath) -> RSSFeedItem? {
+    func getFeedItemFor(indexPath: IndexPath) -> RSSFeedItem? {
         let feed = getFeedFor(section: indexPath.section)
         return feed?.items?[indexPath.row]
     }
     
-    func loadDataFor(feedType : typeFeed) {
+    func loadDataFor(feedType: typeFeed) {
         self.rssFeedParser.getDataFor(typeFeed: feedType, callback: { (feed, error) in
             DispatchQueue.main.async {
                 self.countOfLoadFeed += 1
@@ -118,7 +118,7 @@ class RSSViewController: UIViewController, UITableViewDataSource, UITableViewDel
         })
     }
     
-    func setFeed(feedType : typeFeed , feed: RSSFeed?) {
+    func setFeed(feedType: typeFeed , feed: RSSFeed?) {
         switch feedType {
             case .business:
                 businessFeed = feed
@@ -137,11 +137,11 @@ class RSSViewController: UIViewController, UITableViewDataSource, UITableViewDel
         loadDataFor(feedType: .environment)
     }
     
-    func showError( error : Error){
+    func showError(error: Error){
         
         let alert = UIAlertController(title: "Error", message: error.localizedDescription , preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     
     }
 }
